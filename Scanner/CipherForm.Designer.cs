@@ -50,8 +50,8 @@ namespace CipherScannerApp
             this.speedBox = new System.Windows.Forms.ComboBox();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.loadingBar = new System.Windows.Forms.ProgressBar();
-            this.lblLoading = new System.Windows.Forms.Label();
+            CipherForm.loadingBar = new System.Windows.Forms.ProgressBar();
+            CipherForm.lblLoading = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -210,20 +210,20 @@ namespace CipherScannerApp
             // 
             // loadingBar
             // 
-            this.loadingBar.Location = new System.Drawing.Point(168, 816);
-            this.loadingBar.MarqueeAnimationSpeed = 15;
-            this.loadingBar.Name = "loadingBar";
-            this.loadingBar.Size = new System.Drawing.Size(452, 23);
-            this.loadingBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.loadingBar.TabIndex = 37;
+            CipherForm.loadingBar.Location = new System.Drawing.Point(168, 816);
+            CipherForm.loadingBar.MarqueeAnimationSpeed = 15;
+            CipherForm.loadingBar.Name = "loadingBar";
+            CipherForm.loadingBar.Size = new System.Drawing.Size(452, 23);
+            CipherForm.loadingBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            CipherForm.loadingBar.TabIndex = 37;
             // 
             // lblLoading
             // 
-            this.lblLoading.Location = new System.Drawing.Point(168, 842);
-            this.lblLoading.Name = "lblLoading";
-            this.lblLoading.Size = new System.Drawing.Size(452, 20);
-            this.lblLoading.TabIndex = 38;
-            this.lblLoading.Text = "Scanning.... this may take some time.";
+            CipherForm.lblLoading.Location = new System.Drawing.Point(168, 842);
+            CipherForm.lblLoading.Name = "lblLoading";
+            CipherForm.lblLoading.Size = new System.Drawing.Size(452, 20);
+            CipherForm.lblLoading.TabIndex = 38;
+            CipherForm.lblLoading.Text = "Scanning.... this may take some time.";
             // 
             // label1
             // 
@@ -255,8 +255,8 @@ namespace CipherScannerApp
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPort);
-            this.Controls.Add(this.lblLoading);
-            this.Controls.Add(this.loadingBar);
+            this.Controls.Add(CipherForm.lblLoading);
+            this.Controls.Add(CipherForm.loadingBar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.autoBox);
             this.Controls.Add(this.btnReset);
@@ -288,9 +288,9 @@ namespace CipherScannerApp
 
         private System.Windows.Forms.BindingSource bindingSource1;
 
-        private System.Windows.Forms.Label lblLoading;
+        private static System.Windows.Forms.Label lblLoading;
 
-        private System.Windows.Forms.ProgressBar loadingBar;
+        private static System.Windows.Forms.ProgressBar loadingBar;
 
         private System.Windows.Forms.ComboBox autoBox;
         private System.Windows.Forms.Label label2;

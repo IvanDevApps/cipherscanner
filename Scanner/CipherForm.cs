@@ -79,14 +79,14 @@ namespace CipherScannerApp
             {
                 if (ReferenceEquals(profileBox.SelectedItem.ToString(), "FTP-SMTP-HTTP(s)"))
                     await Task.Run(FSHScan);
-                if (ReferenceEquals(profileBox.SelectedItem.ToString(), "SSH"))
+                else if (ReferenceEquals(profileBox.SelectedItem.ToString(), "SSH"))
                     await Task.Run(SSHScan);
-                if (ReferenceEquals(profileBox.SelectedItem.ToString(), "MC-Auto"))
+                else if (ReferenceEquals(profileBox.SelectedItem.ToString(), "MC-Auto"))
                 {
                     txtPort.Enabled = false;
                     await Task.Run(MinecraftScan);
                 }
-                if (ReferenceEquals(profileBox.SelectedItem.ToString(), "Minecraft"))
+                else if (ReferenceEquals(profileBox.SelectedItem.ToString(), "Minecraft"))
                 {
                     PortsMissing();
                     txtPort.Enabled = true;
@@ -180,6 +180,7 @@ namespace CipherScannerApp
             }
             else
             {
+                LoadLoop(false);
                 MessageBox.Show(@"Error! Please check if:" + _nl + @"1. IP is missing." + _nl + @"2. Profile is selected." + _nl + @"3. Speed is selected.");
             }
         }
@@ -238,7 +239,7 @@ namespace CipherScannerApp
         
         #region OtherFunctions
         // Toggles loading loop progress bar and label
-        private void LoadLoop(bool isOn)
+        public static void LoadLoop(bool isOn)
         {
             loadingBar.Visible = isOn;
             lblLoading.Visible = isOn;
@@ -258,11 +259,12 @@ namespace CipherScannerApp
             LoadLoop(false);
             Refresh();
         }
-
+        // Scan types that are not automatic need ports from user.
         private void PortsMissing()
         {
             if (string.IsNullOrEmpty(txtPort.Text))
             {
+                LoadLoop(false);
                 MessageBox.Show(@"Error! Ports are missing from the PORT Text box.");
             }
         }
@@ -652,8 +654,7 @@ namespace CipherScannerApp
             var mcType = ScanType.Default;
             var mcFlag = NmapFlag.TcpSynScan;
 
-            //_ports = "21000-21020,21021-21040,21041-21060,25500-25520,25521-25540,25541-25560,25561-25580,25600-25610,21245,21249,21650,35500,35565,35575,45597,45500,40994,45565,65500,65535";
-            _ports = "25560-25570";
+            _ports = "21000,21020,21030,21040,21050,21060,25500,25520,25540,25541,25560,25561,25562,25563,25564,25565,25570,25569,25580,25600,25610,21245,21249,21650,35500,35565,35575,45597,45500,40994,45565,65500,65535";
             Scan(mcScanner, mcType, mcFlag, _ports);
         }
 
@@ -672,7 +673,7 @@ namespace CipherScannerApp
             var fshType = ScanType.Default;
             var fshFlag = NmapFlag.TcpSynScan;
             
-            _ports = "1-5,20-22,2230,100,135,140,150,990,1000,2000,2222";                
+            _ports = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,2230,100,135,140,150,990,1000,2000,2222";                
             Scan(fshScanner, fshType, fshFlag, _ports);
         }
         private void SSHScan()
@@ -681,7 +682,7 @@ namespace CipherScannerApp
             var sshType = ScanType.Default;
             var sshFlag = NmapFlag.TcpSynScan;
             
-            _ports = "1-10,11-20,21-50,51-100,445,110-111,135,161,443,512-514,1433-1434,1723,2222,3389,3500-4999,5000-8080";
+            _ports = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,50,51,100,445,110,111,135,161,443,512,514,1433,1434,1723,2222,3389,3500,4999,5000,8080";
             Scan(sshScanner, sshType, sshFlag, _ports);
         }
         #endregion

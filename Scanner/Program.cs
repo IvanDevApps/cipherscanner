@@ -28,6 +28,7 @@ namespace CipherScannerApp
 
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
+            CipherForm.LoadLoop(false);
             MessageBox.Show(e.Exception.Message, "Unhandled Thread Exception");
         }
 
