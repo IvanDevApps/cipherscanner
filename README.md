@@ -10,7 +10,7 @@ What is the difference between Zenmap/Nmap and Cipher Scanner?
 
 Of course, Zenmap/Nmap also has automatic options/profiles, but as mentioned before, they can be confusing sometimes and they might lack some external profile settings like wide port range and similar.
 
-Note - This is my first project on GitHub and since I'm still learning C# expect some newbie mistakes and bugs.
+Note - This is my first project on GitHub and since I'm still learning C# there might be some newbie mistakes and bugs.
 
 ### Built With
 
