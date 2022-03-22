@@ -5,8 +5,8 @@ CipherScanner is a GUI for [SaltwaterTaffy](https://github.com/thomdixon/Saltwat
 Idea of CipherScanner is to make Nmap scanning as simple as possible to users that do not want to spend much time configuring their settings.
 
 What is the difference between Zenmap/Nmap and Cipher Scanner?
-* Zenmap/Nmap sometimes can be confusing to understand, and if someone wants to scan a target quickly with strong scan settings they will not really be able to do it without some research or knowledge.
-* CipherScanner has two options for the user, automatic settings or manual settings. If user does not have any knowledge and does not want to spend time learning and wants the best results quickly, he can use automatic settings and everything will be ready for the user.
+* Zenmap/Nmap sometimes can be confusing, and if someone wants to scan a target quickly with strong scan settings they will not really be able to do it without some research or knowledge.
+* CipherScanner has two options for the user, automatic settings or manual settings. If user does not have any knowledge and wants the best results quickly, he can use automatic settings and everything will be ready for scan.
 
 Of course, Zenmap/Nmap also has automatic options/profiles, but as mentioned before, they can be confusing sometimes and they might lack some external profile settings like wide port range and similar.
 
