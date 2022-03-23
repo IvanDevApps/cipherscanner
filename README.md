@@ -26,6 +26,11 @@ Any contributions you make are **greatly appreciated**.
 If you have a suggestion that would make this better, please fork the repo and create a pull request.
 Don't forget to give the project a star! Thanks again!
 
+<!-- LICENSE -->
+## License
+
+See `LICENSE.md` for more information.
+
 <!-- CONTACT -->
 ## Contact
 
