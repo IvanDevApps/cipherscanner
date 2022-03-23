@@ -12,6 +12,29 @@ Of course, Zenmap/Nmap also has automatic options/profiles, but as mentioned bef
 
 Note - This is my first project on GitHub and since I'm still learning C# there might be some newbie mistakes and bugs.
 
+<!-- GETTING STARTED -->
+## Examples
+
+Here are some examples of Cipher Scanner:</br>
+![](images/cs-1.jpg)</br>
+![](images/cs-2.jpg)
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+How to use Cipher Scanner?  
+
+**Automatic Settings**  
+![](images/cs-Auto.jpg)</br>
+* By choosing something from the given list, e.g. SSH, then SSH settings will be automatically applied, which means you will not need to think about ports, speed and scan type, then all you have to do is put Targets IP Address/Domain and press SCAN button.
+
+**Manual Settings**  
+![](images/cs-IP.jpg)</br>
+![](images/cs-Ports.jpg)</br>
+![](images/cs-TypeSpeed.jpg)</br>
+* Here you will have to put Ports manually, select scan type manually and scan speed. After that is done, make sure you put your Targets IP Address/Domain and press SCAN button.
+
 ### Built With
 
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
