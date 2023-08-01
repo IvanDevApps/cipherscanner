@@ -57,7 +57,7 @@ See `LICENSE.md` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Email - ib.email365@gmail.com
+Email - ivandevapps@gmail.com
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
